@@ -7,12 +7,12 @@ def part1(left_locations, right_locations):
   left_locations.sort()
   right_locations.sort()
 
-  total_distance = 0
+  total = 0
 
   for i in range(len(left_locations)):
-    total_distance += abs(int(left_locations[i]) - int(right_locations[i]))
+    total += abs(int(left_locations[i]) - int(right_locations[i]))
 
-  return(total_distance)
+  return(total)
 
 def part2(left_locations, right_locations):
   total = 0
