@@ -42,5 +42,3 @@ def main(registers):
   return total, total_day2
 
 print(main(registers))
-# print(dampener([8, 6, 4, 4, 1]))
-
