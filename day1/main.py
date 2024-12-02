@@ -3,12 +3,7 @@ locations = f.read().split("\n")
 left_locations = []
 right_locations = []
 
-def part1(locations ):
-  for location in locations:
-    split_location = (location.split("   "))
-    left_locations.append(split_location[0])
-    right_locations.append(split_location[1])
-
+def part1(left_locations, right_locations):
   left_locations.sort()
   right_locations.sort()
 
@@ -19,4 +14,19 @@ def part1(locations ):
 
   return(total_distance)
 
-print(part1(locations))
+def part2(left_locations, right_locations):
+  total = 0
+  
+  for lefty in left_locations:
+    count = right_locations.count(lefty)
+    total += count * int(lefty)
+
+  return total
+
+for location in locations:
+  split_location = (location.split("   "))
+  left_locations.append(split_location[0])
+  right_locations.append(split_location[1])
+
+print(part1(left_locations, right_locations))
+print(part2(left_locations, right_locations))
